@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  height: 100vh;
+  background-color: #111;
+}
+
+header input {
+  margin-right: 5px;
+  padding-inline: 16px;
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #444;
+  color: white;
+  font-size: 1.2rem;
+  border: 1.5px solid #666;
+  outline: none;
+}
+
+header button {
+  width: 100px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #0582ff;
+  color: white;
+  font-size: 1.2rem;
+  border: 1.5px solid #0582ff;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+header button:hover {
+  background-color: #2f97ff;
+}
+.big {
+  display: flex;
+  padding-top: 100px;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.big2 {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 10px;
+  width: 324px;
+  min-height: 300px;
+  background-color: #333;
+  border-radius: 16px;
+}
+
+.element {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-inline: 16px;
+  width: 300px;
+  height: 40px;
+  border-radius: 6px;
+  background-color: #444;
+  cursor: move;
+  border: 1.5px solid #444;
+}
+
+.tas {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.element input {
+  cursor: pointer;
+}
+
+.element p {
+  color: white;
+}
+.element p.done {
+  text-decoration: line-through;
+  color: #aaa;
+}
+.dragging {
+  position: relative;
+  background-color: rgba(68, 68, 68, 0.4);
+}
+
+.dragging::before {
+  content: ".";
+  border-radius: 5px;
+  position: absolute;
+  width: 270px;
+  top: -8px;
+  height: 2px;
+  background-color: #0582ff;
+}
+
+.check {
+  width: 20px;
+  height: 20px;
+  outline: 2px solid #333;
+  background-color: #ffffff;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.15s ease;
+}
+
+.check:hover {
+  transform: scale(1.05);
+}
+
+.check:active {
+  transform: scale(0.95);
+}
+
+.check.selected {
+  background-color: #0582ff;
+}
+.deletee {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+
+  cursor: pointer;
+  border-radius: 8px;
+  width: 24px;
+  height: 24px;
+  padding: 2px;
+}
+
+.deletee:hover {
+  background-color: #666;
+}
+
+.x {
+  display: none;
+}
