@@ -7,6 +7,21 @@ const deletes = document.querySelectorAll(".deletee");
 const btn = document.getElementById("btn");
 const input = document.getElementById("input");
 
+const svg = document.createElementNS("http://www.w3.org/2000/svg", "svg");
+svg.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+svg.setAttribute("width", "16");
+svg.setAttribute("height", "16");
+svg.setAttribute("viewBox", "0 0 24 24");
+svg.setAttribute("fill", "none");
+svg.setAttribute("stroke", "#fff");
+svg.setAttribute("stroke-width", "3");
+svg.setAttribute("stroke-linecap", "round");
+svg.setAttribute("stroke-linejoin", "round");
+
+const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+path.setAttribute("d", "M20 6 9 17l-5-5");
+svg.appendChild(path);
+
 btn.addEventListener("click", (e) => {
   handleTaskAddition(e);
 });
@@ -44,6 +59,7 @@ function handleTaskAddition(e) {
   element.appendChild(deletee);
   tas.appendChild(check);
   tas.appendChild(p);
+  check.appendChild(svg);
 
   element.addEventListener("dragstart", () => {
     element.classList.add("dragging");

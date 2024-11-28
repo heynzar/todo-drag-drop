@@ -120,6 +120,9 @@ header button:hover {
   border-radius: 6px;
   cursor: pointer;
   transition: 0.15s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .check:hover {
